@@ -1,0 +1,121 @@
+.skills-section {
+    padding: 80px 20px;
+    background-color: #121212; /* Dark black background */
+    color: #fff; /* White text for better readability */
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .skills-section h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #fff; /* White text */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .skills-description {
+    font-size: 1.2rem;
+    color: #ddd; /* Light gray text for better contrast */
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Auto-fill with dynamic width */
+    gap: 40px;
+    justify-items: center;
+    margin-top: 40px;
+  }
+  
+  .skill-card {
+    background-color: #1c1c1c; /* Dark gray for the cards */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 280px;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .skill-card h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff; /* White color for the title */
+    margin-top: 20px;
+  }
+  
+  .skill-card p {
+    font-size: 1rem;
+    color: #bbb; /* Light gray for description */
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  .frontend {
+    border-left: 5px solid #007bff; /* Soft Blue for frontend */
+  }
+  
+  .database {
+    border-left: 5px solid #28a745; /* Green for database */
+  }
+  
+  .backend {
+    border-left: 5px solid #ffc107; /* Yellow for backend */
+  }
+  
+  .ai {
+    border-left: 5px solid #dc3545; /* Red for AI-related skills */
+  }
+  
+  .skills-subsection {
+    margin-top: 80px;
+  }
+  
+  .skills-subsection h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff; /* White text */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  @media (max-width: 1024px) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+  
+    .skill-card {
+      padding: 30px;
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr; /* Single column for mobile */
+    }
+  
+    .skill-card {
+      padding: 20px;
+      width: 100%;
+    }
+  }
+  
+  
+  

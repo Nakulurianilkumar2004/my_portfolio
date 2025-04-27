@@ -1,0 +1,84 @@
+/* General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center links horizontally */
+    align-items: center;
+    padding: 15px 50px;
+    background: transparent;
+    position: fixed;
+    top: 0; /* Ensure it stays at the top */
+    width: 100%;
+    z-index: 100;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: none; /* No shadow initially */
+  }
+  
+  /* Navbar when scrolled */
+  .navbar.scrolled {
+    background: #0d0d0d; /* Dark background when scrolled */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Shadow when scrolled */
+  }
+  
+  /* Logo Styles */
+  .navbar-logo {
+    position: absolute;
+    left: 50px; /* Align the logo to the left */
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Link Container Styles */
+  .navbar-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* Link Styles */
+  .navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth transition for color */
+  }
+  
+  /* Link Hover Effect */
+  .navbar-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #00d1ff;
+    transition: width 0.3s;
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Mobile Menu Icon (Hidden by Default) */
+  .menu-icon {
+    display: none;
+  }
+  
+  /* Responsive Navbar (Optional) */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 10px 20px; /* Adjust padding on smaller screens */
+    }
+  
+    .navbar-links {
+      display: none; /* Hide links on small screens */
+    }
+  
+    .menu-icon {
+      display: block; /* Show menu icon */
+      cursor: pointer;
+    }
+  }
+  
+  

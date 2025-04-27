@@ -1,0 +1,68 @@
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #000;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limits the width of the content */
+  }
+  
+  .hero-image img {
+    border-radius: 50%; /* Optional: Makes your image circular */
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    max-width: 600px; /* Optional: Limits the width of the text */
+    text-align: left;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text span {
+    color: #ff5733; /* Accent color for your name */
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .sub-text {
+    font-size: 1.1rem;
+    color: #d3d3d3; /* Light gray for the subtext */
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #c4451e; /* Darker shade on hover */
+  }
+  
+  
+  
+  
+  
