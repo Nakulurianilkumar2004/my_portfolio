@@ -2,19 +2,28 @@ import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 
+function Box() {
+  return (
+    <mesh>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color="navy" />
+    </mesh>
+  );
+}
+
 function Background3D() {
   return (
-    <Canvas className="background-canvas">
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} />
-      {/* Example 3D Object */}
-      <mesh rotation={[90, 0, 20]}>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="blue" />
-      </mesh>
-      <OrbitControls enableZoom={false} />
-    </Canvas>
+    <div style={{ height: '300px', width: '100%', background: 'black', overflow: 'hidden' }}>
+      <Canvas camera={{ position: [2, 2, 2] }}>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box />
+        <OrbitControls enableZoom={false} />
+      </Canvas>
+    </div>
   );
 }
 
 export default Background3D;
+
+

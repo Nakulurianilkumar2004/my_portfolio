@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react'; // You missed this import!
+import { useState, useEffect } from 'react';
 import './Navbar.css';
 import { Link } from 'react-scroll';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,22 +21,40 @@ function Navbar() {
     };
   }, []);
 
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <div className={scrolled ? "navbar scrolled" : "navbar"}>
       <div className="navbar-logo">MyPortfolio</div>
-      <div className="navbar-links">
-        <Link to="hero" smooth={true} duration={500}>Home</Link>
-        <Link to="about" smooth={true} duration={500}>About</Link>
-        <Link to="projects" smooth={true} duration={500}>Projects</Link>
-        <Link to="experience" smooth={true} duration={500}>Experience</Link>
-        <Link to="skills" smooth={true} duration={500}>Skills</Link>
-        <Link to="contact" smooth={true} duration={500}>Contact</Link>
+      
+      <div className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
+        <Link to="hero" smooth={true} duration={500} onClick={closeMobileMenu}>Home</Link>
+        <Link to="about" smooth={true} duration={500} onClick={closeMobileMenu}>About</Link>
+        <Link to="projects" smooth={true} duration={500} onClick={closeMobileMenu}>Projects</Link>
+        <Link to="experience" smooth={true} duration={500} onClick={closeMobileMenu}>Experience</Link>
+        <Link to="skills" smooth={true} duration={500} onClick={closeMobileMenu}>Skills</Link>
+        <Link to="contact" smooth={true} duration={500} onClick={closeMobileMenu}>Contact</Link>
+      </div>
+
+      <div className="menu-icon" onClick={toggleMobileMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
       </div>
     </div>
   );
 }
 
 export default Navbar;
+
+
+
 
 
 

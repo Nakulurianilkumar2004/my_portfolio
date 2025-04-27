@@ -1,68 +1,96 @@
 .hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px;
-    background-color: #000;
-    color: white;
-    min-height: 100vh;
-  }
-  
-  .hero-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Optional: Limits the width of the content */
-  }
-  
-  .hero-image img {
-    border-radius: 50%; /* Optional: Makes your image circular */
-    width: 200px; /* Adjust size as needed */
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .hero-text {
-    max-width: 600px; /* Optional: Limits the width of the text */
-    text-align: left;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #000;
+  color: white;
+  min-height: 100vh;
+  flex-direction: column; /* Ensures content is vertically centered */
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Optional: Limits the width of the content */
+}
+
+.hero-image img {
+  border-radius: 50%; /* Makes your image circular */
+  width: 200px; /* Adjust size as needed */
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Optional: Adds smooth scaling on hover */
+}
+
+.hero-image img:hover {
+  transform: scale(1.1); /* Optional: Slight scaling effect when hovering over the image */
+}
+
+.hero-text {
+  max-width: 600px; /* Optional: Limits the width of the text */
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Optional: Adds text shadow for better contrast */
+}
+
+.hero-text span {
+  color: #ff5733; /* Accent color for your name */
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Optional: Adds text shadow for better contrast */
+}
+
+.sub-text {
+  font-size: 1.1rem;
+  color: #d3d3d3; /* Light gray for the subtext */
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #c4451e; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
   .hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 2rem; /* Smaller font size on mobile */
   }
-  
-  .hero-text span {
-    color: #ff5733; /* Accent color for your name */
+
+  .hero-image img {
+    width: 150px;
+    height: 150px; /* Adjust image size on mobile */
   }
-  
+
   .hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Adjust text size on mobile */
   }
-  
-  .sub-text {
-    font-size: 1.1rem;
-    color: #d3d3d3; /* Light gray for the subtext */
-  }
-  
+
   .cta-button {
-    padding: 10px 20px;
-    background-color: #ff5733;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 0.9rem; /* Smaller button text size */
+    padding: 8px 16px; /* Smaller padding for the button */
   }
-  
-  .cta-button:hover {
-    background-color: #c4451e; /* Darker shade on hover */
-  }
-  
-  
-  
+}
+
   
   

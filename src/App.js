@@ -8,7 +8,6 @@ import ContactForm from './components/ContactForm';
 import Background3D from './components/Background3D';
 import Experience from './Experience';
 
-
 function App() {
   return (
     <div>
@@ -17,7 +16,7 @@ function App() {
       <HeroSection />
       <AboutMe />
       <Projects />
-      <Experience/>
+      <Experience />
       <Skills />
       <ContactForm />
     </div>
@@ -25,4 +24,6 @@ function App() {
 }
 
 export default App;
+
+
 
